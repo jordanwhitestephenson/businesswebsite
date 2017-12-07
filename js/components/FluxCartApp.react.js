@@ -39,6 +39,7 @@ var FluxCartApp = createReactClass({
 
   // Render our child components, passing state via props
   render: function () {
+    console.log(this.state.product)
     return (
       <div className="flux-cart-app">
         <FluxCart products={this.state.cartItems} count={this.state.cartCount} total={this.state.cartTotal}

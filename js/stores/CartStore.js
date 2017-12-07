@@ -7,6 +7,7 @@ var _ = require('underscore');
 // Define initial data points
 var _products = {}, _cartVisible = false;
 
+
 // Add product to cart
 function add(sku, update) {
   update.quantity = sku in _products ? _products[sku].quantity + 1 : 1;

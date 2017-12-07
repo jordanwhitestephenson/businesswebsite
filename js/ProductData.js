@@ -29,6 +29,33 @@ module.exports = {
             inventory: 3
           }
         ]
+      },
+      {
+        id: '023434234',
+        name: 'woot woot',
+        image: 'car6.jpg',
+        description: 'Thsdsfdfsdfsdfney can buy.',
+        variants: [
+          {
+            sku: '12322',
+            type: 'TIre 1',
+            price: 1.99,
+            inventory: 1
+
+          },
+          {
+            sku: '1231123',
+            type: 'Tire 2',
+            price: 6.99,
+            inventory: 5
+          },
+          {
+            sku: '12123312',
+            type: 'Tire 3',
+            price: 20.55,
+            inventory: 3
+          }
+        ]
       }
     ]));
   }

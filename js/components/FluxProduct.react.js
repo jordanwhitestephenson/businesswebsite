@@ -26,32 +26,26 @@ var FluxProduct = createReactClass({
   render: function () {
     var ats = (this.props.selected.sku in this.props.cartitems) ?
     this.props.selected.inventory - this.props.cartitems[this.props.selected.sku].quantity :
-      this.props.selected.inventory;
-    return (
-      <div className="flux-product">
-        
+    this.props.selected.inventory;
+      return (
+        for (var i = 0; i < product; i++) {
+        <div className="flux-product">
+          <div className="flux-product-detail">
+            <h1 className="name">{this.props.product.name}</h1>
+            <p className="description">{this.props.product.description}</p>
 
-        <div className="flux-product-detail">
-          <h1 className="name">{this.props.product.name}</h1>
+            <p className="price">Price: ${this.props.product.price}</p>
 
-          <p className="description">{this.props.product.description}</p>
-
-          <p className="price">Price: ${this.props.selected.price}</p>
-          <select onChange={this.selectVariant}>
-            {this.props.product.variants.map(function (variant, index) {
-              return (
-                <option key={index} value={index}>{variant.type}</option>
-              )
-            })}
-          </select>
-          <button type="button" onClick={this.addToCart} disabled={ats > 0 ? '' : 'disabled'}>
-            {ats > 0 ? 'Add To Cart' : 'Sold Out'}
-          </button>
+            <button type="button" onClick={this.addToCart} disabled={ats > 0 ? '' : 'disabled'}>
+              {ats > 0 ? 'Add To Cart' : 'Sold Out'}
+            </button>
+          </div>
         </div>
-      </div>
-    );
-  }
+        }
+      );
+  },
 
 });
+
 
 module.exports = FluxProduct;
