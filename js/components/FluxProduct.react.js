@@ -28,7 +28,7 @@ var FluxProduct = createReactClass({
     this.props.selected.inventory - this.props.cartitems[this.props.selected.sku].quantity :
     this.props.selected.inventory;
       return (
-        for (var i = 0; i < product; i++) {
+        // for (var i = 0; i < product; i++) {
         <div className="flux-product">
           <div className="flux-product-detail">
             <h1 className="name">{this.props.product.name}</h1>
@@ -41,7 +41,7 @@ var FluxProduct = createReactClass({
             </button>
           </div>
         </div>
-        }
+        // }
       );
   },
 
